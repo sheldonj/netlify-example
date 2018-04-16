@@ -14,3 +14,27 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { label: Body, name: body, widget: markdown}
+
+  - label: "Gift Certificate Types"
+    name: "gift-certificates-types"
+    folder: "_data/gift-certificates-types"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"} 
+      - {label: "Description", name: "description", widget: "string"}  
+
+  - label: "Gift Certificates"
+    name: "gift-certificates"
+    folder: "_data/gift-certificates"
+    extension: "json"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}   
+      - { 
+          label: 'Gift Certificate Type', 
+          name: "type", widget: "relation",
+          collection: "gift-certificates-types", 
+          searchFields: ["title"], 
+          valueField: "title"
+        } 
