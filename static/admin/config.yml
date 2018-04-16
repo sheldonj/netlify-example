@@ -21,8 +21,8 @@ collections:
     extension: "json"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"} 
-      - {label: "Description", name: "description", widget: "string"}  
+      - { label: "Title", name: "title", widget: "string"} 
+      - { label: "Description", name: "description", widget: "string"}  
 
   - label: "Gift Certificates"
     name: "gift-certificates"
@@ -36,5 +36,5 @@ collections:
           name: "type", widget: "relation",
           collection: "gift-certificates-types", 
           searchFields: ["title"], 
-          valueField: "title"
+          valueField: "slug"
         } 
